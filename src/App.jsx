@@ -41,14 +41,14 @@ function App() {
             <a
               className="darker-gray-color"
               target="_blank"
-              href="https://smartalpha.ai"
+              href="http://localhost:5173/"
             >
               Kampanyalar
             </a>
             <a
               className="darker-gray-color"
               target="_blank"
-              href="https://smartalpha.ai"
+              href="http://localhost:5173/"
             >
               Poliçe İptal İşlemleri
             </a>
@@ -125,6 +125,10 @@ function App() {
           Arkadaşlarını Davet Et, 20.000 TL’ye varan hediye çeki kazan!
         </span>
         <img src={rightArrow} alt="" width={22} />
+      </div>
+
+      <div className="third_section">
+        <h2 id="third_section__title">Poliçemi neden Sigortam.net'ten almalıyım ?</h2>
       </div>
     </>
   );
