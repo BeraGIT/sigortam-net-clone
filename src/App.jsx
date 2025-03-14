@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import appLogoGoat from "./assets/images/header/app-logo-goat.svg";
 import appLogoTitle from "./assets/images/header/app-logo-title.svg";
 import phoneLogo from "./assets/images/header/phone-logo.svg";
@@ -17,6 +17,18 @@ import complementhealthV2 from "./assets/images/second-section/complementhealth-
 import gift from "./assets/images/fixed/gift.svg";
 import rightArrow from "./assets/images/fixed/right-arrow.svg";
 
+// section 3
+import policyTrustworthy from "./assets/images/third-section/policy-trustworthy.svg";
+import policyPrice from "./assets/images/third-section/policy-price.svg";
+import policyWithYou from "./assets/images/third-section/policy-with-you.svg";
+
+// section 4
+
+import phoneContent1 from './assets/images/fourth-section/phone-content1.svg';
+import phoneContent2 from './assets/images/fourth-section/phone-content2.svg';
+import phoneWebp from './assets/images/fourth-section/phone.webp';
+import FourthSection from './components/FourthSection';
+
 import "./App.css";
 
 function App() {
@@ -25,6 +37,7 @@ function App() {
   return (
     <>
       <div className="vw-100 vh-100 d-flex flex-column justify-content-start">
+        {/* HEADER */}
         <div
           id="header"
           className="header d-flex w-100 justify-content-between align-items-center"
@@ -67,6 +80,7 @@ function App() {
             <button className="login__button">Giriş Yap / Üye Ol</button>
           </div>
         </div>
+
         {/* SECOND SECTION */}
         <div className="second_section d-flex justify-content-center align-items-center">
           <div
@@ -127,9 +141,47 @@ function App() {
         <img src={rightArrow} alt="" width={22} />
       </div>
 
+      {/* THIRD SECTION */}
       <div className="third_section">
-        <h2 id="third_section__title">Poliçemi neden Sigortam.net'ten almalıyım ?</h2>
+        <h2 className="third_section__title">
+          Poliçemi neden Sigortam.net'ten almalıyım?
+        </h2>
+        <div className="third_section__content">
+          <div className="third_section__card">
+            <img src={policyTrustworthy} alt="Güvenilir" />
+            <h3 className="third_section__card__title">Doğru Ürün</h3>
+            <span className="third_section__card__text">
+              Yenilenen yapay zekâmızla, onlarca sigorta teklifi arasından
+              ucuzunu, sana uygununu ve kapsamlısını buluyoruz. Net teminatlar ve
+              net fiyatlarla kararın hep net olsun.
+            </span>
+          </div>
+          <div className="third_section__card">
+            <img src={policyPrice} alt="Uygun Fiyat" />
+            <h3 className="third_section__card__title">İyi Fiyat</h3>
+            <span className="third_section__card__text">
+              Önceliğimiz her zaman sensin. Çalıştığımız tüm şirketlerde bütçeni
+              düşünerek “en iyi fiyat garantisi” sunuyoruz.
+            </span>
+          </div>
+          <div className="third_section__card">
+            <img src={policyWithYou} alt="Yanınızda" />
+            <h3 className="third_section__card__title">7/24 Hizmet</h3>
+            <span className="third_section__card__text">
+              24 yıllık tecrübemiz ve uzman sigorta danışmanlarımızla 7/24 her
+              ihtiyacında yanındayız. Üstelik hasar anında saniyeler içinde bize
+              ulaşabilirsin.
+            </span>
+          </div>
+        </div>
       </div>
+
+      {/* FOURTH SECTION */}
+      <FourthSection 
+        phoneContent1={phoneContent1}
+        phoneContent2={phoneContent2}
+        phoneWebp={phoneWebp}
+      />
     </>
   );
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 #root {
@@ -67,8 +67,7 @@ a {
 /* SECOND SECTION START */
 
 .second_section {
-  height: 769px;
-  min-height: 769px;
+  min-height: 769px; 
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #F5F7F9;
@@ -170,17 +169,175 @@ a {
   line-height: 17px;
 }
 
+/* THIRD SECTION START */
 .third_section {
   width: 100%;
-  min-height: 300px; /* Yüksekliği artırarak çakışmayı önlüyoruz */
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 50px 0; /* Yukarıdan ve aşağıdan boşluk ekledik */
+  padding: 80px 0; /* Yukarıdan ve aşağıdan boşluk */
 }
 
-.third_section__title{
-  font-weight: 1200;
+.third_section h2{
+  padding-top: 60px;
+}
+
+.third_section__title {
+  font-size: 30px; 
+  font-weight: 600; 
+  color: #1D1E1E;
+  text-align: center; 
+  margin-bottom: 40px; 
+}
+
+.third_section__content {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.third_section__card {
+  flex: 1;
+  max-width: 500px;
+  padding: 20px;
+  background-color: transparent; 
+  border: none; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.third_section__card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px; /* Görsel ile yazı arası */
+}
+
+
+.third_section__card__title {
+  font-size: 24px; 
+  font-weight: 700;
+  color: #1D1E1E;
+  margin-bottom: 16px; 
+}
+
+.third_section__card__text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: center; 
+}
+
+/* Fourth Section */
+.fourth_section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  background: #fff;
+}
+
+.scroll_content {
+  width: 45%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.content_item {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.6s ease; /* Tüm geçişler eşit süreli */
+}
+
+.content_item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content_title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1D1E1E;
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.content_subtext {
+  font-size: 16px;
+  color: #515353;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.offer_button {
+  background: #0089EC;
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.offer_button:hover {
+  background: #0077CC;
+  transform: scale(1.05);
+}
+
+.offer_button:active {
+  transform: scale(0.95);
+}
+
+.phone_container {
+  width: 40%;
+  position: relative;
+}
+
+.phone_image {
+  height: 70vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.svg_overlay {
+  position: absolute;
+  top: 12%;
+  right: 50%;
+  width: 75%;
+  height: 70%;
+}
+
+.svg_item {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: all 0.6s ease; /* SVG geçiş süresi eşitlendi */
+}
+
+.svg_item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.svg_item.leaving {
+  opacity: 0;
+  transform: scale(0.3);
 }
