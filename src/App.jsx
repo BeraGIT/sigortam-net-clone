@@ -29,6 +29,9 @@ import phoneContent2 from './assets/images/fourth-section/phone-content2.svg';
 import phoneWebp from './assets/images/fourth-section/phone.webp';
 import FourthSection from './components/FourthSection';
 
+// section 5
+import FifthSection from './components/FifthSection';
+
 import "./App.css";
 
 function App() {
@@ -182,6 +185,10 @@ function App() {
         phoneContent2={phoneContent2}
         phoneWebp={phoneWebp}
       />
+
+      {/* FIFTH SECTION */}
+      
+      <FifthSection/>
     </>
   );
 }

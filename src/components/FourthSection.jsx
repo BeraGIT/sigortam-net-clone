@@ -4,7 +4,7 @@ const FourthSection = ({ phoneContent1, phoneContent2, phoneWebp }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const containerRef = useRef(null);
-  const timeoutRef = useRef(null); // Timeout'ları yönetmek için ref
+  const timeoutRef = useRef(null); 
 
   const CONTENTS = [
     {
@@ -35,10 +35,10 @@ const FourthSection = ({ phoneContent1, phoneContent2, phoneWebp }) => {
     if (newIndex !== activeIndex) {
       e.preventDefault();
       
-      // Önceki timeout'u temizle
+      // Önceki timeoutu temizle
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       
-      // Yeni index'i hemen güncelle
+      // Yeni indexi hemen güncelle
       setActiveIndex(newIndex);
     }
   };
@@ -61,7 +61,7 @@ const FourthSection = ({ phoneContent1, phoneContent2, phoneWebp }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Left Side - Scroll Content */}
+      {/* Sol Taraf - Scroll Content */}
       <div className="scroll_content">
         {CONTENTS.map((content, index) => (
           <div
@@ -75,7 +75,7 @@ const FourthSection = ({ phoneContent1, phoneContent2, phoneWebp }) => {
         ))}
       </div>
 
-      {/* Right Side - Phone Image */}
+      {/* Sağ Taraf - Phone Image */}
       <div className="phone_container">
         <img src={phoneWebp} alt="Phone" className="phone_image" />
         <div className="svg_overlay">

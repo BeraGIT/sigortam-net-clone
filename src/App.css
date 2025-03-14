@@ -177,7 +177,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 80px 0; /* Yukarıdan ve aşağıdan boşluk */
+  padding: 80px 0; 
 }
 
 .third_section h2{
@@ -216,7 +216,7 @@ a {
 .third_section__card img {
   width: 80px;
   height: 80px;
-  margin-bottom: 20px; /* Görsel ile yazı arası */
+  margin-bottom: 20px; 
 }
 
 
@@ -260,7 +260,7 @@ a {
   left: 0;
   opacity: 0;
   transform: translateY(100%);
-  transition: all 0.6s ease; /* Tüm geçişler eşit süreli */
+  transition: all 0.6s ease; /* geçis sürelerini eşitlemek için */
 }
 
 .content_item.active {
@@ -329,7 +329,7 @@ a {
   height: auto;
   opacity: 0;
   transform: scale(0.3);
-  transition: all 0.6s ease; /* SVG geçiş süresi eşitlendi */
+  transition: all 0.6s ease; 
 }
 
 .svg_item.active {
@@ -341,3 +341,112 @@ a {
   opacity: 0;
   transform: scale(0.3);
 }
+
+/* FIFTH SECTION START */
+
+.fifth_section {
+  padding: 3rem 1rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+.fifth_section h2{
+  padding-top: 60px;
+}
+
+.tabs_container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: #0089EC;
+  color: white;
+}
+
+.tab.disabled {
+  background: none;
+  color: black;
+  cursor: default;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab.disabled:hover {
+  border: 2px solid #0089EC;
+  box-shadow: 0px 0px 6px rgba(0, 137, 236, 0.6);
+}
+
+
+.carousel {
+  position: relative;
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.media {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav_arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #0089EC;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav_arrow.left {
+  left: -50px; /* Okun konumunu sola al */
+}
+
+.nav_arrow.right {
+  right: -50px; /* Okun konumunu sağa al */
+}
+
+.nav_arrow:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.dots_container {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #0089EC;
+  transform: scale(1.3);
+}
+
