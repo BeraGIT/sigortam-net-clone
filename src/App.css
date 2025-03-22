@@ -418,11 +418,11 @@ a {
 }
 
 .nav_arrow.left {
-  left: -50px; /* Okun konumunu sola al */
+  left: -5px; 
 }
 
 .nav_arrow.right {
-  right: -50px; /* Okun konumunu sağa al */
+  right: -5px; 
 }
 
 .nav_arrow:hover {
